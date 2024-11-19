@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="clicker.controller.HomeScreenController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <VBox spacing="20" alignment="CENTER">
+
+        <VBox.margin>
+            <Insets top="20" bottom="20" left="20" right="20"/>
+        </VBox.margin>
+
+        <!-- Title -->
+        <Button text="User Page" fx:id="loginButton" onAction="#handleLogin" prefWidth="200" />
+        <Button text="Admin Page" fx:id="adminButton" onAction="#handleAdmin" prefWidth="200" />
+        <Button text="Exit" fx:id="exitButton" onAction="#handleExit" prefWidth="200" />
+    </VBox>
+
+</AnchorPane>
