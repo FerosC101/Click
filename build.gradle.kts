@@ -40,16 +40,22 @@ tasks {
     }
 }
 
+
+tasks {
+    test {
+        useJUnitPlatform()
+    }
+
+    named<JavaExec>("run") {
+        jvmArgs = listOf(
+            "--module-path", configurations.runtimeClasspath.get().asPath,
+            "--add-modules", "javafx.controls,javafx.fxml"
+        )
+    }
+}
+
 application {
     mainClass.set("clicker.Main")
 }
 
-tasks.named("run") {
-    doFirst {
-        jvmArgs = [
-            "--module-path", configurations.runtimeClasspath.asPath,
-            "--add-modules", "javafx.controls,javafx.fxml"
-        ]
-    }
-}
 

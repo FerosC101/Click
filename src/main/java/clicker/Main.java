@@ -12,7 +12,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) {
         try {
             // Load the Home Screen FXML file
-            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("ui/home-screen.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getClassLoader().getResource("ui/home_screen.fxml"));
             Parent root = loader.load();
 
             primaryStage.setTitle("Click Task");
