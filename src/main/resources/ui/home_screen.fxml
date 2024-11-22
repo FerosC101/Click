@@ -1,28 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="clicker.controller.HomeScreenController"
-            prefHeight="400.0" prefWidth="600.0">
-
-    <VBox spacing="20" alignment="CENTER" layoutX="100" layoutY="50" prefWidth="200" prefHeight="200">
-        <VBox.margin>
-            <Insets top="100" bottom="100" left="100" right="100"/>
-        </VBox.margin>
-
-        <Button text="Login" fx:id="loginButton" onAction="#handleLogin" prefWidth="200"
-                style="-fx-background-color: gray; -fx-text-fill: white;"/>
-        <Button text="Admin Login" fx:id="adminButton" onAction="#handleAdmin" prefWidth="200"
-                style="-fx-background-color: gray; -fx-text-fill: white;"/>
-        <Button text="Exit" fx:id="exitButton" onAction="#handleExit" prefWidth="200"
-                style="-fx-background-color: gray; -fx-text-fill: white;"/>
+<?import java.net.URL?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="clicker.controller.HomeScreenController">
+    <stylesheets>
+        <URL value="@/styles/style.css"/>
+    </stylesheets>
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Label text="Welcome to Click Task" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Button text="Login" onAction="#handleLogin" style="-fx-font-size: 14px;"/>
+        <Button text="Admin Login" onAction="#handleAdmin" style="-fx-font-size: 14px;"/>
+        <Button text="Exit" onAction="#handleExit" style="-fx-font-size: 14px;"/>
     </VBox>
-
 </AnchorPane>
