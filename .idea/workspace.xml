@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="login and signup">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/HomeScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/HomeScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/util/NavigationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/util/NavigationUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/home_screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/home_screen.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/login.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="login and signup" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -139,7 +129,7 @@
       <workItem from="1732275674589" duration="1037000" />
       <workItem from="1732292059663" duration="2923000" />
       <workItem from="1732295222624" duration="8000" />
-      <workItem from="1732376714383" duration="2220000" />
+      <workItem from="1732376714383" duration="2881000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -181,7 +171,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732376733816</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="login and signup">
+      <option name="closed" value="true" />
+      <created>1732380334143</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732380334143</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
