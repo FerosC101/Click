@@ -11,8 +11,8 @@
     <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <Label text="Welcome to Click Task" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
-        <Button text="Login" onAction="#handleLogin" style="-fx-font-size: 14px;"/>
-        <Button text="Admin Login" onAction="#handleAdmin" style="-fx-font-size: 14px;"/>
-        <Button text="Exit" onAction="#handleExit" style="-fx-font-size: 14px;"/>
+        <Button fx:id="loginButton" text="Login" onAction="#handleLogin" style="-fx-font-size: 14px;"/>
+        <Button fx:id="adminButton" text="Admin Login" onAction="#handleAdmin" style="-fx-font-size: 14px;"/>
+        <Button fx:id="exitButton" text="Exit" onAction="#handleExit" style="-fx-font-size: 14px;"/>
     </VBox>
 </AnchorPane>

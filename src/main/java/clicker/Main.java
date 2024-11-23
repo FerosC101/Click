@@ -16,7 +16,7 @@ public class Main extends Application {
             Parent root = loader.load();
 
             primaryStage.setTitle("Click Task");
-            primaryStage.setScene(new Scene(root, 400, 300)); // Adjust dimensions as needed
+            primaryStage.setScene(new Scene(root, 400, 300));
             primaryStage.show();
         } catch (Exception e) {
             e.printStackTrace();

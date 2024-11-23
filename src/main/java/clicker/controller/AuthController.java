@@ -1,16 +1,16 @@
 package clicker.controller;
 
 import clicker.connection.DatabaseConnection;
+import clicker.util.NavigationUtil;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,6 +18,7 @@ import java.sql.ResultSet;
 
 public class AuthController {
 
+    public Button loginButton;
     @FXML
     private TextField usernameField;
 
@@ -52,6 +53,13 @@ public class AuthController {
     }
 
     @FXML
+    private void handleSignUp(ActionEvent event) {
+        // Use the NavigationUtil to switch to the signup page
+        NavigationUtil.navigateTo("/ui/signup.fxml", (Node) event.getSource());
+        System.out.println("Navigated to Sign Up page.");
+    }
+
+    @FXML
     public void openSignUp() {
         loadFXML("/clicker/ui/signup.fxml");
     }
@@ -70,4 +78,6 @@ public class AuthController {
             e.printStackTrace();
         }
     }
+
+
 }

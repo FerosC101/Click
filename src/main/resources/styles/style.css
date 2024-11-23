@@ -3,22 +3,45 @@
     -fx-background-color: #f0f0f0;
 }
 
-Button {
-    -fx-background-color: #4CAF50;
+.button {
+    -fx-background-color: #808080;
     -fx-text-fill: white;
     -fx-font-size: 14px;
     -fx-font-weight: bold;
-    -fx-cursor: hand;
-    -fx-padding: 8 15;
+    -fx-min-width: 120px;
+    -fx-min-height: 40px;
+    -fx-max-width: 120px;
+    -fx-max-height: 40px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
 }
+
+.button:disabled {
+    -fx-background-color: #A9A9A9;
+    -fx-text-fill: #666666;
+}
+
 
 Button:hover {
-    -fx-background-color: #45A049;
+    -fx-background-color: #666666;
 }
 
-TextField, PasswordField {
-    -fx-padding: 10;
-    -fx-font-size: 14px;
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-border-color: lightgray;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+    -fx-padding: 5;
+}
+
+.hyperlink {
+    -fx-text-fill: #4CAF50;
+    -fx-font-size: 12px;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #45A049;
+    -fx-underline: true;
 }
 
 Label {
