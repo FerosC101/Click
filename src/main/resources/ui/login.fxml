@@ -11,10 +11,8 @@
     <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
           AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
 
-        <!-- Title Label -->
         <Label text="Click Task" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
 
-        <!-- Username and Password Fields -->
         <VBox spacing="10" alignment="CENTER">
             <Label text="Username"/>
             <TextField fx:id="usernameField" promptText="Enter your username" prefWidth="250"/>
@@ -23,10 +21,8 @@
             <PasswordField fx:id="passwordField" promptText="Enter your password" prefWidth="250"/>
         </VBox>
 
-        <!-- Login Button -->
         <Button text="Login" fx:id="loginButton" onAction="#handleLogin" prefWidth="250"/>
 
-        <!-- Sign Up Link -->
         <VBox alignment="CENTER" spacing="5">
             <Label text="Don't have an account?"/>
             <Hyperlink text="Sign up" fx:id="signupLink" onAction="#handleSignUp"/>

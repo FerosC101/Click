@@ -4,18 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="login and signup">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/HomeScreenController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/HomeScreenController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/util/NavigationUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/util/NavigationUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/home_screen.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/home_screen.fxml" afterDir="false" />
+    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="working ui for login">
       <change beforePath="$PROJECT_DIR$/src/main/resources/ui/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +133,7 @@
       <workItem from="1732295222624" duration="8000" />
       <workItem from="1732376714383" duration="3434000" />
       <workItem from="1732424688706" duration="700000" />
-      <workItem from="1732543098943" duration="4441000" />
+      <workItem from="1732543098943" duration="4733000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -201,7 +191,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732381365891</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="working ui for login">
+      <option name="closed" value="true" />
+      <created>1732547819687</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732547819687</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,7 +209,8 @@
     <MESSAGE value="." />
     <MESSAGE value="working homepage" />
     <MESSAGE value="login and signup" />
-    <option name="LAST_COMMIT_MESSAGE" value="login and signup" />
+    <MESSAGE value="working ui for login" />
+    <option name="LAST_COMMIT_MESSAGE" value="working ui for login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
