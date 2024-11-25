@@ -28,7 +28,6 @@ public class LoginController {
     private Label loginStatusLabel;
 
 
-    // Validate user credentials
     private boolean validateUser(String username, String password) {
         String query = "SELECT * FROM users WHERE username = ? AND password = ?";
         try (Connection conn = DatabaseConnection.getConnection();

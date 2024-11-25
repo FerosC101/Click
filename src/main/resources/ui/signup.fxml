@@ -8,18 +8,16 @@
     <stylesheets>
         <URL value="@/styles/style.css"/>
     </stylesheets>
-    <children>
-        <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
-              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
-            <Label text="Sign Up" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
-            <VBox spacing="10" alignment="CENTER">
-                <Label text="Username"/>
-                <TextField fx:id="usernameField" promptText="Enter your username" prefWidth="300"/>
-                <Label text="Password"/>
-                <PasswordField fx:id="passwordField" promptText="Enter your password" prefWidth="300"/>
-            </VBox>
-            <Button text="Sign Up" onAction="#handleSignUp" style="-fx-font-size: 14px;"/>
-            <Hyperlink text="Back to Login" onAction="#openLogin"/>
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Label text="Sign Up" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Username"/>
+            <TextField fx:id="usernameField" promptText="Enter your username" prefWidth="300"/>
+            <Label text="Password"/>
+            <PasswordField fx:id="passwordField" promptText="Enter your password" prefWidth="300"/>
         </VBox>
-    </children>
+        <Button fx:id="signUpButton" text="Sign Up" onAction="#handleSignUp" style="-fx-font-size: 14px;"/>
+        <Hyperlink text="Back to Login" onAction="#openLogin"/>
+    </VBox>
 </AnchorPane>

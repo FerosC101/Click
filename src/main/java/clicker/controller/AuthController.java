@@ -2,82 +2,67 @@ package clicker.controller;
 
 import clicker.connection.DatabaseConnection;
 import clicker.util.NavigationUtil;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.stage.Stage;
 
-import java.awt.event.ActionEvent;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class AuthController {
-
+    @FXML
     public Button loginButton;
+    @FXML
+    public Hyperlink signupLink;
     @FXML
     private TextField usernameField;
 
     @FXML
     private PasswordField passwordField;
 
-    private Stage getCurrentStage() {
-        return (Stage) usernameField.getScene().getWindow();
-    }
-
     @FXML
-    public void handleLogin() {
+    private void handleLogin(ActionEvent event) {
+        if (usernameField == null || passwordField == null) {
+            System.err.println("FXML elements are not properly initialized.");
+            return;
+        }
+
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        try (Connection connection = DatabaseConnection.getConnection()) {
+        if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Username or password cannot be empty.", ButtonType.OK);
+            alert.showAndWait();
+            return;
+        }
+
+        try (Connection conn = DatabaseConnection.getConnection()) {
             String query = "SELECT * FROM users WHERE username = ? AND password = ?";
-            PreparedStatement stmt = connection.prepareStatement(query);
+            PreparedStatement stmt = conn.prepareStatement(query);
             stmt.setString(1, username);
             stmt.setString(2, password);
 
             ResultSet rs = stmt.executeQuery();
+
             if (rs.next()) {
-                loadFXML("/clicker/ui/home_screen.fxml");
+                NavigationUtil.navigateTo("/ui/home_screen.fxml", loginButton);
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid username or password.", ButtonType.OK);
                 alert.showAndWait();
             }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Database error: " + e.getMessage(), ButtonType.OK);
+            alert.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Unexpected error: " + e.getMessage(), ButtonType.OK);
+            alert.showAndWait();
         }
     }
 
-    @FXML
-    private void handleSignUp(ActionEvent event) {
-        // Use the NavigationUtil to switch to the signup page
-        NavigationUtil.navigateTo("/ui/signup.fxml", (Node) event.getSource());
-        System.out.println("Navigated to Sign Up page.");
+    public void handleSignUp(ActionEvent actionEvent) {
     }
-
-    @FXML
-    public void openSignUp() {
-        loadFXML("/clicker/ui/signup.fxml");
-    }
-
-    @FXML
-    public void openLogin() {
-        loadFXML("/clicker/ui/login.fxml");
-    }
-
-    private void loadFXML(String fxmlPath) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlPath));
-            Parent root = loader.load();
-            getCurrentStage().setScene(new Scene(root));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 }

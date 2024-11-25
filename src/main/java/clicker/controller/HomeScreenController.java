@@ -4,6 +4,7 @@ import clicker.util.NavigationUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.stage.Stage;
 
 public class HomeScreenController {
 
@@ -16,28 +17,23 @@ public class HomeScreenController {
     @FXML
     private Button exitButton;
 
-    /**
-     * Replace current window content with the User Login screen.
-     */
     @FXML
     public void handleLogin(ActionEvent event) {
-        NavigationUtil.navigateTo("ui/login.fxml", loginButton);
+        if (!NavigationUtil.navigateTo("/ui/login.fxml", loginButton)) {
+            System.err.println("Failed to load login.fxml");
+        }
     }
 
-
-    /**
-     * Replace current window content with the Admin Login screen.
-     */
     @FXML
     public void handleAdmin(ActionEvent event) {
-        NavigationUtil.navigateTo("/ui/login.fxml", adminButton);
+        if (!NavigationUtil.navigateTo("/ui/admin_login.fxml", adminButton)) {
+            System.err.println("Failed to load admin_login.fxml");
+        }
     }
 
-    /**
-     * Close the application.
-     */
     @FXML
     public void handleExit(ActionEvent event) {
-        System.exit(0); // Exit the application
+        Stage stage = (Stage) exitButton.getScene().getWindow();
+        stage.close();
     }
 }

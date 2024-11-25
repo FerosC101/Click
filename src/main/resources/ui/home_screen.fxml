@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
 <?import java.net.URL?>
 <AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="clicker.controller.HomeScreenController">
     <stylesheets>
+        <!-- Corrected stylesheet path -->
         <URL value="@/styles/style.css"/>
     </stylesheets>
     <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"

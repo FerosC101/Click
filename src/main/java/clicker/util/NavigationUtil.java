@@ -1,22 +1,26 @@
 package clicker.util;
 
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.stage.Stage;
+import javafx.scene.Node;
 
-import java.util.Objects;
+import java.io.IOException;
 
 public class NavigationUtil {
 
-    public static void navigateTo(String fxmlPath, Node node) {
+    public static boolean navigateTo(String fxmlPath, Node currentNode) {
         try {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(NavigationUtil.class.getClassLoader().getResource(fxmlPath)));
-            Scene scene = node.getScene();
-            scene.setRoot(root);
-        } catch (Exception e) {
+            FXMLLoader loader = new FXMLLoader(NavigationUtil.class.getResource(fxmlPath));
+            Parent newRoot = loader.load();
+
+            Scene currentScene = currentNode.getScene();
+            currentScene.setRoot(newRoot);
+        } catch (IOException e) {
             e.printStackTrace();
+            System.err.println("Failed to load " + fxmlPath);
         }
+        return false;
     }
+
 }

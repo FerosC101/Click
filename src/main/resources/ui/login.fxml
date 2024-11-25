@@ -3,31 +3,34 @@
 <?import javafx.scene.layout.*?>
 
 <?import java.net.URL?>
-
-<AnchorPane xmlns:fx="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-            fx:controller="clicker.controller.AuthController">
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="clicker.controller.AuthController">
     <stylesheets>
-        <URL value="@styles/style.css"/>
+        <URL value="@/styles/style.css"/>
     </stylesheets>
 
-    <VBox alignment="TOP_LEFT" spacing="20" layoutX="50" layoutY="50">
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+
+        <!-- Title Label -->
         <Label text="Click Task" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
 
-        <VBox spacing="10" alignment="CENTER_LEFT">
-            <Label text="Username" style="-fx-font-size: 14px;"/>
+        <!-- Username and Password Fields -->
+        <VBox spacing="10" alignment="CENTER">
+            <Label text="Username"/>
             <TextField fx:id="usernameField" promptText="Enter your username" prefWidth="250"/>
 
-            <Label text="Password" style="-fx-font-size: 14px;"/>
+            <Label text="Password"/>
             <PasswordField fx:id="passwordField" promptText="Enter your password" prefWidth="250"/>
         </VBox>
 
-        <Button text="Login" fx:id="loginButton" onAction="#handleLogin" prefWidth="250"
-                style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+        <!-- Login Button -->
+        <Button text="Login" fx:id="loginButton" onAction="#handleLogin" prefWidth="250"/>
 
-        <VBox alignment="CENTER_LEFT" spacing="5">
+        <!-- Sign Up Link -->
+        <VBox alignment="CENTER" spacing="5">
             <Label text="Don't have an account?"/>
             <Hyperlink text="Sign up" fx:id="signupLink" onAction="#handleSignUp"/>
         </VBox>
+
     </VBox>
 </AnchorPane>
-
