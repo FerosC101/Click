@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="working ui for login">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/login.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/signup.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +48,7 @@
     <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.openjfx/javafx-fxml/23/f8f33c215eb9c172d62e1646cb5dc351bc5d918e/javafx-fxml-23-win.jar!/javafx/fxml/FXMLLoader.class" root0="SKIP_INSPECTION" />
   </component>
   <component name="KotlinScriptingSettings">
+    <option name="suppressDefinitionsCheck" value="true" />
     <scriptDefinition className="org.jetbrains.kotlin.scripting.resolve.KotlinScriptDefinitionFromAnnotatedTemplate" definitionName="KotlinBuildScript">
       <order>2147483647</order>
       <autoReloadConfigurations>true</autoReloadConfigurations>
@@ -133,7 +137,10 @@
       <workItem from="1732295222624" duration="8000" />
       <workItem from="1732376714383" duration="3434000" />
       <workItem from="1732424688706" duration="700000" />
-      <workItem from="1732543098943" duration="4733000" />
+      <workItem from="1732543098943" duration="4880000" />
+      <workItem from="1732599792018" duration="201000" />
+      <workItem from="1732705849968" duration="85000" />
+      <workItem from="1732726468986" duration="2199000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -199,7 +206,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732547819687</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="working ui for login">
+      <option name="closed" value="true" />
+      <created>1732547986872</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732547986872</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
