@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="clicker.controller.UserController">
+    <stylesheets>
+        <URL value="@/styles/style.css"/>
+    </stylesheets>
+    <VBox spacing="20" alignment="CENTER" AnchorPane.topAnchor="0.0" AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <Label text="User Menu" style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+        <Button fx:id="startTaskButton" text="Start Task" onAction="#handleStartTask" style="-fx-font-size: 14px;"/>
+        <Button fx:id="viewStatsButton" text="View Statistics" onAction="#handleViewStats" style="-fx-font-size: 14px;"/>
+        <Button fx:id="logoutButton" text="Logout" onAction="#handleLogout" style="-fx-font-size: 14px;"/>
+    </VBox>
+</AnchorPane>

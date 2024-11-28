@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="working ui for login">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="working signup Link">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/ui/user_menu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/signup.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/signup.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/UserController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
         <option value="CSS File" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -140,7 +141,9 @@
       <workItem from="1732543098943" duration="4880000" />
       <workItem from="1732599792018" duration="201000" />
       <workItem from="1732705849968" duration="85000" />
-      <workItem from="1732726468986" duration="2199000" />
+      <workItem from="1732726468986" duration="2530000" />
+      <workItem from="1732730416618" duration="222000" />
+      <workItem from="1732809971324" duration="798000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -214,7 +217,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732547986872</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="working signup Link">
+      <option name="closed" value="true" />
+      <created>1732728992774</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732728992774</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,7 +236,8 @@
     <MESSAGE value="working homepage" />
     <MESSAGE value="login and signup" />
     <MESSAGE value="working ui for login" />
-    <option name="LAST_COMMIT_MESSAGE" value="working ui for login" />
+    <MESSAGE value="working signup Link" />
+    <option name="LAST_COMMIT_MESSAGE" value="working signup Link" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

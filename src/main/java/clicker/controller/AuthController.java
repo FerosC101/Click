@@ -98,7 +98,7 @@ public class AuthController {
                 Alert alert = new Alert(Alert.AlertType.INFORMATION, "User has been registered.", ButtonType.OK);
                 alert.showAndWait();
 
-                NavigationUtil.navigateTo("/ui/login.fxml", signupButton);
+                NavigationUtil. navigateTo("/ui/login.fxml", signupButton);
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "Failed to Create Account. Please try again.", ButtonType.OK);
                 alert.showAndWait();
