@@ -10,7 +10,7 @@ CREATE TABLE stats (
     task_id SERIAL,
     user_id INT,
     click_count INT,
-    time_spent INTERVAL,
+    time_spent BIGINT NOT NULL ,
     date TIMESTAMP
 
 );
