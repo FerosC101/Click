@@ -2,15 +2,15 @@ CREATE DATABASE click;
 
 CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(50),
-    password VARCHAR(50)
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE stats (
-    task_id SERIAL,
-    user_id INT,
-    click_count INT,
+    task_id INT AUTO_INCREMENT PRIMARY KEY ,
+    user_id INT NOT NULL ,
+    click_count INT DEFAULT 0,
     time_spent BIGINT NOT NULL ,
-    date TIMESTAMP
-
+    date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(user_id) ON DELETE CASCADE
 );

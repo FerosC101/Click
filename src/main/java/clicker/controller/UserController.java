@@ -3,7 +3,6 @@ package clicker.controller;
 import clicker.util.NavigationUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
@@ -18,7 +17,7 @@ public class UserController {
 
     @FXML
     private void handleStartTask(ActionEvent event) {
-        boolean success = NavigationUtil.navigateTo("/ui/task_screen.fxml", (Node) event.getSource());
+        boolean success = NavigationUtil.navigateTo("/ui/task_page.fxml", startTaskButton);
         if (!success) {
             showErrorAlert("Failed to navigate to the Start Task screen.");
         }
@@ -27,7 +26,7 @@ public class UserController {
     @FXML
     private void handleViewStats(ActionEvent event) {
 
-        boolean success = NavigationUtil.navigateTo("/ui/stats_screen.fxml", (Node) event.getSource());
+        boolean success = NavigationUtil.navigateTo("/ui/stats_screen.fxml", viewStatsButton);
         if (!success) {
             showErrorAlert("Failed to navigate to the View Statistics screen.");
         }
@@ -35,7 +34,7 @@ public class UserController {
 
     @FXML
     private void handleLogout(ActionEvent event) {
-        boolean success = NavigationUtil.navigateTo("/ui/login.fxml", (Node) event.getSource());
+        boolean success = NavigationUtil.navigateTo("/ui/home_screen.fxml", logoutButton);
         if (!success) {
             showErrorAlert("Failed to log out.");
         }

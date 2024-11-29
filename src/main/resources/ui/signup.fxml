@@ -17,6 +17,6 @@
             <PasswordField fx:id="passwordField" promptText="Enter your password" prefWidth="300"/>
         </VBox>
         <Button fx:id="signupButton" text="Sign Up" onAction="#handleSignUp" style="-fx-font-size: 14px;"/>
-        <Hyperlink text="Back to Login" onAction="#openLogin"/>
+        <Hyperlink text="Back to Login" onAction="#returntohome"/>
     </VBox>
 </AnchorPane>

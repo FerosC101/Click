@@ -1,67 +1,46 @@
 package clicker.controller;
 
-import clicker.connection.DatabaseConnection;
+import clicker.connection.UserDAO;
+import clicker.model.User;
 import clicker.util.NavigationUtil;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Hyperlink;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 
 public class AuthController {
-
     @FXML
-    public Button loginButton;
+    private Button loginButton;
     @FXML
-    public Hyperlink signupLink;
+    private Hyperlink signupLink;
     @FXML
-    public Button signupButton;
+    private Button signupButton;
     @FXML
     private TextField usernameField;
     @FXML
     private PasswordField passwordField;
 
+    private final UserDAO userDAO = new UserDAO();
+
     @FXML
     private void handleLogin(ActionEvent event) {
-        if (usernameField == null || passwordField == null) {
-            System.err.println("FXML elements are not properly initialized.");
-            return;
-        }
-
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "Username or password cannot be empty.", ButtonType.OK);
-            alert.showAndWait();
+        if (username.isEmpty() || password.isEmpty()) {
+            showAlert(Alert.AlertType.WARNING, "Validation Error", "Username or password cannot be empty.");
             return;
         }
 
-        try (Connection conn = DatabaseConnection.getConnection()) {
-            String query = "SELECT * FROM users WHERE username = ? AND password = ?";
-            PreparedStatement stmt = conn.prepareStatement(query);
-            stmt.setString(1, username);
-            stmt.setString(2, password);
-
-            ResultSet rs = stmt.executeQuery();
-
-            if (rs.next()) {
-                NavigationUtil.navigateTo("src/main/resources/ui/home_screen.fxml", loginButton);
-            } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Invalid username or password.", ButtonType.OK);
-                alert.showAndWait();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Database error: " + e.getMessage(), ButtonType.OK);
-            alert.showAndWait();
-        } catch (Exception e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Unexpected error: " + e.getMessage(), ButtonType.OK);
-            alert.showAndWait();
+        User user = userDAO.verifyUser(username, password);
+        if (user != null) {
+            NavigationUtil.navigateTo("/ui/user_menu.fxml", loginButton);
+        } else {
+            showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid username or password.");
         }
     }
 
@@ -70,52 +49,30 @@ public class AuthController {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
-        if (username == null || username.isEmpty() || password == null || password.isEmpty()) {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "Username or password cannot be empty.", ButtonType.OK);
-            alert.showAndWait();
+        if (username.isEmpty() || password.isEmpty()) {
+            showAlert(Alert.AlertType.WARNING, "Validation Error", "Username or password cannot be empty.");
             return;
         }
 
-        try (Connection conn = DatabaseConnection.getConnection()) {
-            String checkQuery = "SELECT * FROM users WHERE username = ?";
-            
-            PreparedStatement stmt = conn.prepareStatement(checkQuery);
-            stmt.setString(1, username);
-            
-            if (stmt.executeQuery().next()) {
-                Alert alert = new Alert(Alert.AlertType.WARNING, "Username already exists.", ButtonType.OK);
-                alert.showAndWait();
-                return;
-            }
-            
-            String insertQuery = "INSERT INTO users (username, password) VALUES (?, ?)";
-            PreparedStatement insertStmt = conn.prepareStatement(insertQuery);
-            insertStmt.setString(1, username);
-            insertStmt.setString(2, password);
-            
-            int rowsAffected = insertStmt.executeUpdate();
-            if (rowsAffected > 0) {
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "User has been registered.", ButtonType.OK);
-                alert.showAndWait();
+        if (userDAO.isUsernameTaken(username)) {
+            showAlert(Alert.AlertType.WARNING, "Signup Failed", "Username already exists.");
+            return;
+        }
 
-                NavigationUtil. navigateTo("/ui/login.fxml", signupButton);
-            } else {
-                Alert alert = new Alert(Alert.AlertType.ERROR, "Failed to Create Account. Please try again.", ButtonType.OK);
-                alert.showAndWait();
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Database error: " + e.getMessage(), ButtonType.OK);
-            alert.showAndWait();
-        } catch (Exception e) {
-            e.printStackTrace();
-            Alert alert = new Alert(Alert.AlertType.ERROR, "Unexpected error: " + e.getMessage(), ButtonType.OK);
-            alert.showAndWait();
+        if (userDAO.createUser(username, password)) {
+            showAlert(Alert.AlertType.INFORMATION, "Signup Successful", "Account created successfully!");
+            NavigationUtil.navigateTo("/ui/home_screen.fxml", signupButton);
+        } else {
+            showAlert(Alert.AlertType.ERROR, "Signup Failed", "An error occurred during signup. Please try again.");
         }
     }
 
-    @FXML
-    private void openLogin(ActionEvent event) {
-        NavigationUtil.navigateTo("src/main/resources/ui/login.fxml", loginButton);
+    private void showAlert(Alert.AlertType type, String title, String message) {
+        Alert alert = new Alert(type, message, ButtonType.OK);
+        alert.setTitle(title);
+        alert.showAndWait();
+    }
+
+    public void returntohome(ActionEvent event) {
     }
 }

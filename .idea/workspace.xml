@@ -4,12 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="USERMENU">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" afterDir="false" />
+    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="added minor stuff">
+      <change afterPath="$PROJECT_DIR$/src/main/java/clicker/connection/TaskStatsDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/clicker/model/TaskStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/61320d76-0081-4e6c-b75f-c345ef4bb1dc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/61320d76-0081-4e6c-b75f-c345ef4bb1dc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/connection/DatabaseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/connection/DatabaseConnection.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clicker/connection/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/connection/UserDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clicker/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/sql/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,9 +30,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="CSS File" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -150,7 +156,7 @@
       <workItem from="1732726468986" duration="2530000" />
       <workItem from="1732730416618" duration="222000" />
       <workItem from="1732809971324" duration="1166000" />
-      <workItem from="1732884960447" duration="3390000" />
+      <workItem from="1732884960447" duration="5517000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -240,7 +246,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732810997982</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added minor stuff">
+      <option name="closed" value="true" />
+      <created>1732894012059</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732894012059</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added minor stuff">
+      <option name="closed" value="true" />
+      <created>1732894063369</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732894063369</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +275,8 @@
     <MESSAGE value="working ui for login" />
     <MESSAGE value="working signup Link" />
     <MESSAGE value="USERMENU" />
-    <option name="LAST_COMMIT_MESSAGE" value="USERMENU" />
+    <MESSAGE value="added minor stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="added minor stuff" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
