@@ -38,6 +38,7 @@ public class AuthController {
 
         User user = userDAO.verifyUser(username, password);
         if (user != null) {
+            TaskController.setCurrentUserId(user.getId());
             NavigationUtil.navigateTo("/ui/user_menu.fxml", loginButton);
         } else {
             showAlert(Alert.AlertType.ERROR, "Login Failed", "Invalid username or password.");

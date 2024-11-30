@@ -32,7 +32,7 @@ public class UserDAO {
             stmt.setString(1, username);
 
             ResultSet rs = stmt.executeQuery();
-            return rs.next(); // If a row exists, username is taken
+            return rs.next();
         } catch (Exception e) {
             e.printStackTrace();
         }
