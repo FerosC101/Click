@@ -23,7 +23,7 @@ public class TaskStats {
     }
 
     public int getTaskId() {
-        return taskId;
+        return this.taskId;
     }
 
     public int getUserId() {
@@ -40,6 +40,11 @@ public class TaskStats {
 
     public java.sql.Date getDate() {
         return (java.sql.Date) date;
+    }
+
+    public int setTaskId(int taskId) {
+        this.taskId = taskId;
+        return taskId;
     }
 
     public void setUserId(int UserId) {

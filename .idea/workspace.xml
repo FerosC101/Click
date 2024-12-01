@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="added other methods">
-      <change afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/TaskController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ui/dashboard.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/ui/task_page.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="working taskpage">
+      <change afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/DashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/connection/UserDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/connection/UserDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/connection/TaskStatsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/connection/TaskStatsDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/clicker/model/TaskStats.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/model/TaskStats.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/styles/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/styles/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/dashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,7 +156,8 @@
       <workItem from="1732809971324" duration="1166000" />
       <workItem from="1732884960447" duration="5517000" />
       <workItem from="1732896223089" duration="522000" />
-      <workItem from="1732985195823" duration="3513000" />
+      <workItem from="1732985195823" duration="3754000" />
+      <workItem from="1733064208140" duration="3225000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -269,7 +271,23 @@
       <option name="project" value="LOCAL" />
       <updated>1732896696117</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="working taskpage">
+      <option name="closed" value="true" />
+      <created>1732989329333</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732989329334</updated>
+    </task>
+    <task id="LOCAL-00016" summary="working taskpage">
+      <option name="closed" value="true" />
+      <created>1732989482385</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732989482385</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +302,8 @@
     <MESSAGE value="USERMENU" />
     <MESSAGE value="added minor stuff" />
     <MESSAGE value="added other methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="added other methods" />
+    <MESSAGE value="working taskpage" />
+    <option name="LAST_COMMIT_MESSAGE" value="working taskpage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

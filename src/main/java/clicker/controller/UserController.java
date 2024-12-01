@@ -25,8 +25,7 @@ public class UserController {
 
     @FXML
     private void handleViewStats(ActionEvent event) {
-
-        boolean success = NavigationUtil.navigateTo("/ui/stats_screen.fxml", viewStatsButton);
+        boolean success = NavigationUtil.navigateTo("/ui/dashboard.fxml", viewStatsButton);
         if (!success) {
             showErrorAlert("Failed to navigate to the View Statistics screen.");
         }
@@ -39,6 +38,8 @@ public class UserController {
             showErrorAlert("Failed to log out.");
         }
     }
+
+
 
     private void showErrorAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR, message, ButtonType.OK);

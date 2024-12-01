@@ -15,7 +15,7 @@ public class Main extends Application {
             Parent root = loader.load();
 
             primaryStage.setTitle("Click Task Application");
-            Scene scene = new Scene(root, 400, 300);
+            Scene scene = new Scene(root, 650, 820);
             primaryStage.setScene(scene);
 
             primaryStage.setResizable(true);
