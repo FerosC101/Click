@@ -16,11 +16,12 @@ public class NavigationUtil {
 
             Scene currentScene = currentNode.getScene();
             currentScene.setRoot(newRoot);
+
+            return true; 
         } catch (IOException e) {
             e.printStackTrace();
             System.err.println("Failed to load " + fxmlPath);
         }
         return false;
     }
-
 }
