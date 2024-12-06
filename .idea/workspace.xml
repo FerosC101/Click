@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="dashboard fix?">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="d35ab118-ce18-4821-b87a-637597d6c81f" name="Changes" comment="admin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/connection/TaskStatsDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/connection/TaskStatsDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/DashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/DashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/dashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/dashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/clicker/controller/AdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clicker/controller/AdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ui/admin_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ui/admin_login.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +72,7 @@
   "keyToString": {
     "Application.App .executor": "Profiler#1",
     "Gradle.Build Clicker.executor": "Run",
-    "Gradle.Clicker [:clicker.Main.main()].executor": "Debug",
+    "Gradle.Clicker [:clicker.Main.main()].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -165,7 +161,7 @@
       <workItem from="1733273768391" duration="80000" />
       <workItem from="1733306658502" duration="3564000" />
       <workItem from="1733414717852" duration="958000" />
-      <workItem from="1733497473423" duration="2834000" />
+      <workItem from="1733497473423" duration="3951000" />
     </task>
     <task id="LOCAL-00001" summary=".">
       <option name="closed" value="true" />
@@ -311,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733249946722</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="admin">
+      <option name="closed" value="true" />
+      <created>1733500714493</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1733500714493</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,7 +333,8 @@
     <MESSAGE value="working taskpage" />
     <MESSAGE value="dashboard" />
     <MESSAGE value="dashboard fix?" />
-    <option name="LAST_COMMIT_MESSAGE" value="dashboard fix?" />
+    <MESSAGE value="admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

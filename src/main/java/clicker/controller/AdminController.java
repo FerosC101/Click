@@ -2,13 +2,14 @@ package clicker.controller;
 
 import clicker.util.NavigationUtil;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.Node;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.Node;
 
 public class AdminController {
-
+    @FXML
+    private Hyperlink returnlink;
     @FXML
     private TextField usernameField;
 
@@ -16,20 +17,19 @@ public class AdminController {
     private PasswordField passwordField;
 
     @FXML
-    private Label errorLabel;
-
-    // Handler for login
-    @FXML
     private void handleLogin() {
         String username = usernameField.getText();
         String password = passwordField.getText();
 
         if ("admin".equals(username) && "admin123".equals(password)) {
-            // Login successful, switch to admin menu
-            Node currentNode = usernameField;
-            NavigationUtil.navigateTo("/ui/admin_menu.fxml", currentNode);  // Using NavigationUtil to navigate
+            System.out.println("Admin Login Successful!");
         } else {
-            errorLabel.setText("Invalid username or password.");
+            System.out.println("Invalid credentials.");
         }
+    }
+
+    @FXML
+    private void returnToHome(javafx.event.ActionEvent event) {
+        NavigationUtil.navigateTo("/ui/home.screen.fxml", returnlink);
     }
 }
