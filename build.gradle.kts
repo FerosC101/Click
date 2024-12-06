@@ -38,13 +38,6 @@ tasks {
     test {
         useJUnitPlatform()
     }
-}
-
-
-tasks {
-    test {
-        useJUnitPlatform()
-    }
 
     named<JavaExec>("run") {
         jvmArgs = listOf(

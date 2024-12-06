@@ -12,16 +12,16 @@ public class TaskStatsDAO {
 
     public void addTaskStats(TaskStats stats) {
         try (Connection connection = DatabaseConnection.getConnection()) {
-            String query = "INSERT INTO stats (task_id, user_id, click_count, time_spent, date) values (?, ?, ?, ?, ?)";
+            String query = "INSERT INTO stats (task_id, user_id, click_count, time_spent, date) VALUES (?, ?, ?, ?, ?)";
             PreparedStatement stmt = connection.prepareStatement(query);
             stmt.setInt(1, stats.getTaskId());
             stmt.setInt(2, stats.getUserId());
             stmt.setInt(3, stats.getClickCount());
             stmt.setLong(4, stats.getTimeSpent());
-            stmt.setDate(5, stats.getDate());
+            stmt.setDate(5, stats.getDate()); // Ensure this matches your TaskStats model type
             stmt.executeUpdate();
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Error adding task stats: " + e.getMessage());
         }
     }
 
@@ -36,15 +36,15 @@ public class TaskStatsDAO {
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 TaskStats stats = new TaskStats();
-                stats.getTaskId();
+                stats.setTaskId(rs.getInt("task_id")); // FIXED
                 stats.setUserId(rs.getInt("user_id"));
                 stats.setClickCount(rs.getInt("click_count"));
                 stats.setTimeSpent(rs.getLong("time_spent"));
-                stats.setDate(rs.getDate("date"));
+                stats.setDate(rs.getDate("date")); // Ensure compatibility
                 statsList.add(stats);
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Error adding task stats: " + e.getMessage());
         }
         return statsList;
     }
@@ -59,9 +59,9 @@ public class TaskStatsDAO {
                 return rs.getDouble("avg_clicks");
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Error adding task stats: " + e.getMessage());
         }
-        return 0;
+        return 0.0; // Return 0.0 if no data or an error occurs
     }
 
     public double getAverageTimeSpent(int userId) {
@@ -74,8 +74,8 @@ public class TaskStatsDAO {
                 return rs.getDouble("avg_time");
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            System.err.println("Error adding task stats: " + e.getMessage());
         }
-        return 0;
+        return 0.0;
     }
 }
